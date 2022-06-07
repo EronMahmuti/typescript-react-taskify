@@ -2,23 +2,27 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+let name: string;
+let age: number | string;
+let isStudent: boolean;
+let hobbies: string;
+let role: [number, string];
+let printName: (name:string) => void;
+
+type Person = {
+  name: string;
+  age: number;
+};
+let person: Person = {
+  name: "Eron",
+  age: 33,
+}; 
+
+
+const App: React.FC = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <span className='heading' >Taskify</span>
     </div>
   );
 }
